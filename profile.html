@@ -105,8 +105,26 @@
 .sticky + .content {
   padding-top: 60px;
 }
+.container {
+  height: 30px;
+  width: 50%;
+  background-color: #ddd;
+}
 
-    </style>
+.skills {
+	height: 10px;
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html { height: "inherit";width: 90%; background-color: #262626;}
+.css { height: "inherit";width: 85%; background-color: #333333;}
+.js {height: "inherit";width: 70%; background-color: #404040;}
+.php {height: "inherit";width: 75%; background-color: #4d4d4d;}
+.java {height: "inherit";width: 81%; background-color: #595959;}
+ </style>
 <body background="three.png">
 <div id="navbar" class="sticky">
   <a href="#welcome">Welcome</a>
@@ -118,7 +136,7 @@
 </div>
 <div class="content" id="welcome">
 <div >
-<h3 align="center" style="font-size:40px;" >Welcome to my profile!</h3>
+<h3 align="center" style="font-size:40px;" ><marquee behavior ="scroll  direction="left">Welcome to my profile!</marquee></h3>
     <br>
     <hr>
     <br>
@@ -136,10 +154,10 @@
 <section>
   <nav >
   
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-linkedin"></a>
+<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+<a href="https://twitter.com/" class="fa fa-twitter"></a>
+<a href="https://gmail.com/" class="fa fa-google"></a>
+<a href="https://linkedin.com/" class="fa fa-linkedin"></a>
  
   </nav>
   
@@ -214,18 +232,29 @@ parties involved in regulated US exports</li>
 <div id="techskills"></div>
 <h3 align="center" style="font-size:20px;" >Technical Skills</h3>
 
-<ul>
-  
-<li>C </li>
-<li>C++</li>
-<li>Java</li>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>Bootstrap</li>
-<li>D3</li>
-<li>Racket</li>
-</ul>
+<p>HTML</p>
+<div class="container">
+  <div class="skills html">90%</div>
+</div>
+
+<p>CSS</p>
+<div class="container">
+  <div class="skills css">85%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="container">
+  <div class="skills js">70%</div>
+</div>
+
+<p>PHP</p>
+<div class="container">
+  <div class="skills php">75%</div>
+</div>
+<p>Java</p>
+<div class="container">
+  <div class="skills java">81%</div>
+</div>
 <hr>
 <footer align="center">
   <p>&copy; 2019 Team2<p>
