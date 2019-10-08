@@ -16,7 +16,7 @@ body {
 margin:auto;
 	
 	width:600px;
-	height:850px;
+	height:650px;
   padding: 16px;
   background-color: white;
     
@@ -25,11 +25,11 @@ margin:auto;
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  padding: 10px;
+  margin: 5px 0 5px 0;
   display: inline-block;
-  border: none;
-  background: #f1f1f1;
+  border: 1px solid black;
+  background:#F2FBEF;
 }
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
@@ -65,40 +65,135 @@ a {
   text-align: center;
 }
 </style>
+
 </head>
 <body>
-
-
+<form name="myform"  onsubmit="return validation1()">
+  <div>
+  <h1 style="text-align:center; color:white;">PLEASE REGISTER</h1>
+   </div>
   <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
+    
+    <p ><b>Please fill in this form to create an account.</b></p>
     <hr>
-      <label for="fname"><b>First name</b></label>
-    <input type="text" placeholder="Please Enter your first name" name="fname" required>
+      <label  for="fname"><b>First name</b></label>
+      <input  type="text" placeholder="Please Enter your first name" name="fname" >
       <label for="lname"><b>Last name</b></label>
-    <input type="text" placeholder="Please Enter your Last name" name="lname" required>
-      <label for="dob"> <b>Date of Birth   </b></label>
-      <input type="date" name="bday" required>
-      <br>
-      <br>
+      <input type="text" placeholder="Please Enter your Last name" name="lname" >
+      
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email" >
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="psw" >
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password"  placeholder="Repeat Password " name="psw-repeat" required>
+    <input type="password"  placeholder="Repeat Password " name="psw-repeat" >
+     <label  for="dob"> <b>Date of Birth   </b></label>
+      <input type="date" name="bday">
+      
       
     <hr>
-    <p style="text-align:center;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-
-    <button type="submit" class="registerbtn">Register</button>
-    <p style="text-align:center;">Already have an account? <a href="login.html">Sign in</a>.</p>
+   <div style="display:inline-block;"> 
+  <input type="checkbox" name="terms" required>
   </div>
+  <div style="display:inline-block;">
+  <p style="text-align:center;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+  </div>
+   <a > <button type="submit"  onclick="login.html" class="registerbtn">Register</button> </a>
+    
+ 
+  </div>
+  <p style="text-align:center; color:white;">Already have an account? <a href="login.html">Sign in</a>.</p>
+ 
   
-  
+</form>
 
+<script type="text/javascript"> 
+function validation1()	
+{ 
+	
+	var fname = document.forms["myform"]["fname"];	
+    var lname = document.forms["myform"]["lname"];
+    
+	var email = document.forms["myform"]["email"]; 
+	 
+	var password = document.forms["myform"]["psw"]; 
+    var pswrepeat = document.forms["myform"]["pswrepeat"];
+	
+
+	if (fname.value == "")								 
+	{ 
+		window.alert("Please enter your name."); 
+		 
+		return false; 
+	} 
+    if (lname.value == "")								 
+	{ 
+		window.alert("Please enter your last name."); 
+		 
+		return false; 
+	} 
+
+	 
+	
+	if (email.value == "")								 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		 
+		return false; 
+	} 
+
+	if (email.value.indexOf("@", 0) < 0)	
+		
+	{ 
+		console.log("invalid")
+		window.alert("Please enter a valid e-mail address."); 
+		 
+		return false; 
+	} 
+
+	if (email.value.indexOf(".", 0) < 0)				 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		 
+		return false; 
+	} 
+
+	
+
+	if (password.value == "")					 
+	{ 
+		window.alert("Please enter your password"); 
+		
+		return false; 
+	} 
+	
+	
+    
+    if (pswrepeat.value == "")					 
+	{ 
+		window.alert("Please enter your password"); 
+		 
+		return false; 
+	} 
+     
+     if(password.value != pswrepeat.value){
+    	 console.log(password.value);
+    	 console.log(pswrepeat.value);
+    	 
+    	 window.alert("password doesn't match");
+    	 return false;
+     }
+    
+    
+    
+	
+
+	return true; 
+}
+</script>
 
 </body>
+
 </html>
