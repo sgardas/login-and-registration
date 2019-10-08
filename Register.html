@@ -1,80 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>
-        Registration form
-</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  background-image:url("bg.jpg");
+}
+* {
+  box-sizing: border-box;
+}
+/* Add padding to containers */
+.container {
+margin:auto;
+	
+	width:600px;
+	height:850px;
+  padding: 16px;
+  background-color: white;
+    
+    
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+   text-align: center; 
+}
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 150px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
 </head>
-<body class="fpage">
-
-<div align="center"  >
-
-<h1 style="color:white;"><b>Please Register</b></h1>
-
-</div>
-
-<form>
-
- <div style="align:center;">
-
- <div style="text-align:center;" class="card" >
-
-  <div class="form-row">
- <span><label> <b>FIRST NAME:  </b> </label> </span>
- <div class="box"><input type="text" placeholder="ENTER FIRST NAME" class="inputfields" size="30" required><br><br>
- </div>
- </div>
- <div class="form-row">
- <label> <b>LAST NAME:   </b> </label>
- <input type="text" placeholder="ENTER LAST NAME" class="inputfields" size="30"  required><br><br>
-</div>
- <div class="form-row">
- <label> <b>DATE OF BIRTH:  </b> </label> 
-<input type="date" min="01/01/1950" max="10/07/2019" class="inputfields" size="30"required><br><br>
-</div>
-<div class="form-row">
-<label> <b>
- SEX:
- </b> </label> 
-    <input type="radio" name="gender" value="male"> Male
-     <input type="radio" name="gender" value="male"> Female<br><br>
-</div>
-<div class="form-row">
-<label> <b >EMAIL:  </b> </label> 
-<input type="text" placeholder="ENTER EMAIL" class="inputfields" size="30"  required><br><br>
-</div>
-<div class="form-row">
-<label> <b >PASSWORD:  </b> </label> 
-<input type="password" placeholder="ENTER PASSWORD" class="inputfields" size="30"  required><br><br>
-</div>
-<div class="form-row">
-<label> <b >CONFIRM PASSWORD:  </b> </label> 
-<input type="password" placeholder="CONFIRM PASSWORD" class="inputfields" size="30"  required><br><br>
-</div>
-<div class="form-row">
- <label> <b>
- ACCOUNT TYPE:
- </b> </label> 
- <select class="inputfields" required>
- <option disabled="disabled" selected="selected">CHOOSE ACCOUNT TYPE</option>
-  <option value="BASIC">BASIC</option>
-  <option value="PREMIUM">PREMIUM</option>
-</select>
-</div>
-<br><br><br>
-<button class="btn">
-   
-<b>REGISTER</b>
- 
- </button>
-
-</div>
-</div>
+<body>
 
 
-</form>
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+      <label for="fname"><b>First name</b></label>
+    <input type="text" placeholder="Please Enter your first name" name="fname" required>
+      <label for="lname"><b>Last name</b></label>
+    <input type="text" placeholder="Please Enter your Last name" name="lname" required>
+      <label for="dob"> <b>Date of Birth   </b></label>
+      <input type="date" name="bday" required>
+      <br>
+      <br>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password"  placeholder="Repeat Password " name="psw-repeat" required>
+      
+    <hr>
+    <p style="text-align:center;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+    <p style="text-align:center;">Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+  
+  
 
 
 </body>
